@@ -1,0 +1,153 @@
+@import '../../assets/styles/global.scss';
+
+.login-form{
+    padding: 1em 0;
+    .w-head{
+        font-family: Sans-serif;
+        font-size: 2.5em;
+        font-weight: 700;
+        line-height: 55px;
+        letter-spacing: -0.04em;
+        text-align: center;
+        color: $base-color;
+    }
+    .dets-log{
+        font-family: Avenir Next;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: $font-color;
+
+    }
+    form{
+        text-align: center;
+    .logform-div{
+        border: 1px solid #545F7D26;
+        border-radius: 5px;
+        position: relative;
+        margin: 1em auto;
+         .show-label{
+            position: absolute;
+            bottom: 1em;
+            left: 1em;
+        }
+        .no-show{
+            display: none;
+        }
+        input{
+            height:3em;
+            width: 80vw;
+            border: none;
+            outline: none;
+            &:focus+.show-label,
+            &:focus+.no-show{
+            display: block;
+            top: -1em;
+            left: 1.5em;
+            transform: 2s;
+            background: #fff;
+            height: max-content;
+        }
+        }
+       
+        .show{
+            position: absolute;
+            right: 1em;
+            top: 1em;
+        }
+
+    }
+    .login-btn{
+        background: $btn-color;
+        height: 3em;
+        width: 80vw;
+        border-radius: 8px;
+        font-family: Avenir Next;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 19px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+    }
+}
+}
+
+
+@media screen and (min-width: 768px) {
+.login-form{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 15px 90px 0px #00000008;
+    height: 100vh;
+    width: 40vw;
+    .w-head{
+        font-family: Avenir Next;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 55px;
+        text-align: left;
+        color: $base-color;
+        margin: 1em;
+    }
+    .dets-log{
+        font-family: Avenir Next;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $font-color;
+        margin: 1em;
+    }
+    form{
+        
+        text-align: center;
+    .logform-div{
+        
+        border: 1px solid #545F7D26;
+        border-radius: 5px;
+        position: relative;
+        margin: 1em;
+        input{
+            height: 50px;
+            width: 447px;
+            border: none;
+            outline: none;
+            padding-left: 1em;
+      
+        }
+        label{
+            position: absolute;
+            bottom: 1em;
+            left: 1em;
+        }
+        .show{
+            position: absolute;
+            right: 1em;
+            top: 1em;
+        }
+
+    }
+    .login-btn{
+        background: $btn-color;
+        height: 48px;
+        width: 447px;
+        border-radius: 8px;
+        font-family: Avenir Next;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 19px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+    }
+}
+}
+}

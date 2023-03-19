@@ -1,0 +1,25 @@
+.logo-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto;
+    .union-logo{
+        height: 2em;
+        width: 2em;
+        margin: 5px;
+}
+    }
+
+
+@media screen and (min-width: 768px){
+.logo-wrap{
+    justify-content:flex-start;
+    margin: 1em 0;
+    }
+.union-logo{
+    height: 25.003942489624023px;
+    width: 24.75px;
+    border-radius: 0px;
+    
+}
+}

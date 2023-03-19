@@ -1,0 +1,109 @@
+@import '../../assets/styles/global';
+
+.nav-bar{
+    width: 100vw;
+    height: 6.25em;
+    padding: 1em;
+    background: #ffffff;
+    box-shadow: 3px 0px 20px 0px #0000000A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    .nav-logo{
+        display: flex;
+        align-items: center;
+        .unioni{
+            width: 1em;
+            height: 1em;
+            margin: 5px;
+        }
+        .lenderqsr{
+            width: 3em;
+            height:1em;
+        }
+    }
+    .nav-search{
+        display: none;
+}
+.nav-notifs{
+    width: 50vw;
+    font-family: Work Sans;
+    color: $base-color;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: left;
+    .docs{
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+
+    }
+.avatar{
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+
+
+}
+.profile{
+
+}
+}
+}
+
+@media screen and (min-width: 768px){
+    .nav-bar{
+    width: 100vw;
+    height: 6.25em;
+    background: #ffffff;
+    box-shadow: 3px 0px 20px 0px #0000000A;
+    position: sticky;
+    top: 0;
+    .nav-search{
+        display: block;
+        position: relative;
+        height: 40px;
+        width: 400px;
+        border-radius: 8px;
+        border: 1px solid $base-color;
+        z-index: 1;
+        input{
+            border: 0;
+            outline: 0;
+            padding: 0.5em 0.5em; 
+        }
+
+    .search-btn{
+        background: $btn-color;
+        color: #fff;
+        position: absolute;
+        right: 0;
+        height: 38px;
+        width: 3em;
+        border-radius: 0 8px 8px 0;
+        border: 0;
+    }
+}
+.nav-notifs{
+    width: 20vw;
+   
+.avatar{
+    border-radius: 50%;
+    height: 60px;
+    width: 48px;
+
+
+}
+.profile{
+
+}
+}
+}
+}
