@@ -7,7 +7,7 @@ import { MdOutlinePersonRemoveAlt1  } from 'react-icons/md'
 import vector from "../../assets/images/Vector.png"
 import { useGetSingleUserQuery } from '../../features/lendsqrApi'
 import { useNavigate } from 'react-router-dom';
-import { RespData } from '../model/model'
+import { RespData, UserObj } from '../model/model'
 import './tables.scss'
 
 interface Tabledata{
@@ -20,26 +20,27 @@ interface Tabledata{
 }
 const DisplayTable = (tabledata: Tabledata):JSX.Element => {
     interface Arraydata {
-        orgName: string,
-        userName: string,
-        email: string,
-        phoneNumber: string,
-        createdAt: string,
-        id: string
+        orgName: string | null,
+        userName: string | null,
+        email: string | null,
+        phoneNumber: string | null,
+        createdAt: string | null,
+        id: string | null
     }
    
     const navigate = useNavigate()
     
-    const [dialog, setDialog] = useState({})
+    const [dialog, setDialog] = useState<{[key:string]: boolean}>({})
     const [orgDrop, setOrgDrop] = useState(false)
-    const [userId, setUserId] = useState('')
+    const [userId, setUserId] = useState<string>()
+
 
     const { data, isLoading, error } = useGetSingleUserQuery<RespData>(userId)
 
       function handleClick(id: string){
         console.log(id)
         setUserId(id)
-        localStorage.removeItem('userdata')
+        console.log(data)
         localStorage.setItem('userdata', JSON.stringify(data))
         setDialog({})
         navigate('/dashboard/Userdetails/')
@@ -130,7 +131,8 @@ const DisplayTable = (tabledata: Tabledata):JSX.Element => {
                     </thead>
                     
                     <tbody>
-                        {tabledata.array.slice(tabledata.pageNo-1,tabledata.dataSize).map(({orgName,userName,email, phoneNumber, createdAt, id}, index:number) => {
+                        {tabledata.array.slice(tabledata.pageNo-1,tabledata.dataSize)
+                        .map(({orgName,userName,email, phoneNumber, createdAt, id}:any) => {
                             return (
                                 <tr key={id}>
 
@@ -141,9 +143,9 @@ const DisplayTable = (tabledata: Tabledata):JSX.Element => {
                                     <td>{createdAt.toLocaleString()}</td>
                                     <td>{}</td>
                                     <td className="stat-td">
-                                        <BiDotsVerticalRounded onClick={() => setDialog({ ...dialog, [index]: !dialog[index] })} />
+                                        <BiDotsVerticalRounded onClick={() => setDialog({ ...dialog, [id]: !dialog[id] })} />
                                         {
-                                            dialog[index] && <span className='dialogbox'>
+                                            dialog[id] && <span className='dialogbox'>
                                                 <div onClick={()=>handleClick(id)} className="jcc-aic">
                                                     <AiOutlineEye/> View Details</div>
                                                 <div className="jcc-aic"> <MdOutlinePersonRemoveAlt1/>Blacklist User</div>

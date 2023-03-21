@@ -4,13 +4,16 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import { IoPersonOutline } from "react-icons/io5";
 import Navbar from '../Components/navbar/Navbar';
 import Sidebar from '../Components/sidenav/Sidebar'
+import { UserObj } from '../Components/model/model'
 import "../assets/styles/userdetails.scss"
 
 const UserDetails = ():JSX.Element => {
   const navigate = useNavigate()
-  console.log(localStorage.getItem('userdata'))
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('userdata')))
-  console.log(user)
+ 
+  const [user, setUser] = useState<UserObj[]>(JSON.parse(localStorage.getItem('userdata') || ''))
+
+  
+
   return (
     <div>
       <Navbar/>

@@ -9,7 +9,7 @@ import {RespData} from '../Components/model/model'
 const Dashboard = ():JSX.Element => {
   const [pageNo, setPageNo] = useState(1)
   const [dataSize, setDataSize] = useState(10)
-  const { data: allData, error, isLoading } = useGetAllUsersQuery<RespData>('items')
+  const { data: allData, error, isLoading } = useGetAllUsersQuery<RespData>('bulbasaur')
 
   
   return (
