@@ -2,15 +2,15 @@
     "rewrites": [
         {
             "src": "/",
-            "dest": "/"
+            "destination": "/"
         },
         {
             "src": "/dashboard",
-            "dest": "/dashboard"
+            "destination": "/dashboard"
         },
     {
             "src": "/dashboard/Userdetails",
-            "dest": "/dashboard/Userdetails"
+            "destination": "/dashboard/Userdetails"
         }
     ]
 }
