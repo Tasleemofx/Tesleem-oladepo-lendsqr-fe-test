@@ -40,6 +40,81 @@
         top: 290px;
         border-radius: 4px;
         border: 1px solid #213F7D0F;
+       
+        .avatar-symb{
+          height: 100px;
+          width: 100px;
+          left: 373px;
+          top: 320px;
+          border-radius: 50%;
+          background: #213F7D;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 1em;
+
+
+        }
+        .user-fname{
+          padding: 1em;
+          margin: 1em;
+          border-right: 1px solid $font-color;
+          .fname{
+            font-family: Work Sans;
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 26px;
+            letter-spacing: 0px;
+            text-align: left;
+            color: $card-font;
+            margin: 1em;
+          }
+          .act-no{
+            font-family: Work Sans;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0px;
+            text-align: left;
+            color: $font-color;
+            margin: 0 2em;
+          }
+        }
+        .user-tier{
+          margin: 1em;
+          .u-tier{
+            font-family: Work Sans;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16px;
+            letter-spacing: 0px;
+            text-align: left;
+            color: $font-color;
+            
+
+          }
+          span svg{
+           color: #E9B200;
+            
+          }
+        }
+        .acct{
+          margin: 1em;
+          border-left: 1px solid $font-color;
+          padding: 1em;
+          .act-bal{
+            font-family: Work Sans;
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 26px;
+            letter-spacing: 0px;
+            text-align: left;
+            color: $font-color;
+          }
+          .acct-no{
+
+          }
+        }
     }
 
     .pi-box{
@@ -52,6 +127,48 @@
         opacity: 0.6;
         border:1px solid #213F7D0F;
         box-shadow: 3px 5px 20px 0px #0000000A;
+      .mai-head{
+        font-family: Work Sans;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: $card-font;
+        margin: 1em;
+      }
+        .inf-body{
+          margin: 1em;
+          
+          .s-grid{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap:2em;
+          .h-t{
+            font-family: Work Sans;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14px;
+            letter-spacing: 0px;
+            text-align: left;
+            color: $font-color;
+            margin: 1em 0;
+          }
+          .d-field{
+            font-family: Work Sans;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19px;
+            letter-spacing: 0px;
+            text-align: left;
+            color: $font-color;
+            margin: 0.3em 0;
+          }
+        }
+        .e-grid{
+          grid-template-columns: repeat(4, 1fr);
+        }
 
+      }
     }
 }

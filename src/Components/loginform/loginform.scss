@@ -36,11 +36,23 @@
         .no-show{
             display: none;
         }
+        label{
+            
+                font-family: Avenir Next;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 19px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #545F7D;
+                opacity: 0.6;
+        }
         input{
             height:3em;
             width: 80vw;
             border: none;
             outline: none;
+            
             &:focus+.show-label,
             &:focus+.no-show{
             display: block;
@@ -49,8 +61,11 @@
             transform: 2s;
             background: #fff;
             height: max-content;
+            
         }
         }
+        
+            
        
         .show{
             position: absolute;
@@ -59,10 +74,22 @@
         }
 
     }
+    .forgot-password{
+        
+               font-family: Avenir Next;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 16px;
+                letter-spacing: 0.1em;
+                text-align: left;
+                margin: 1em 0 1em 1em;
+                color: $btn-color;
+    }
     .login-btn{
         background: $btn-color;
         height: 3em;
         width: 80vw;
+        border: none;
         border-radius: 8px;
         font-family: Avenir Next;
         font-size: 14px;
@@ -118,8 +145,8 @@
             width: 447px;
             border: none;
             outline: none;
-            padding-left: 1em;
-      
+            padding-left: 0.3em;
+            
         }
         label{
             position: absolute;

@@ -1,47 +1,47 @@
 export interface UserObj{
-    createdAt: String,
-        orgName: String,
-            userName: String,
-                email: String,
-                    phoneNumber: String,
-                        lastActiveDate: String,
+    createdAt: string,
+        orgName: string,
+            userName: string,
+                email: string,
+                    phoneNumber: string,
+                        lastActiveDate: string,
                             profile: {
-        firstName: String,
-            lastName: String,
-                phoneNumber: String,
-                    avatar: String
-                        gender: String,
-                            bvn: String,
-                                address: String,
-                                    currency: String
+        firstName: string,
+            lastName: string,
+                phoneNumber: string,
+                    avatar: string
+                        gender: string,
+                            bvn: string,
+                                address: string,
+                                    currency: string
     },
     guarantor: {
-        firstName: String,
-            lastName: String,
-                phoneNumber: String,
-                    gender: String,
-                        address: String
+        firstName: string,
+            lastName: string,
+                phoneNumber: string,
+                    gender: string,
+                        address: string
     },
-    accountBalance: String,
-        accountNumber:String,
+    accountBalance: string,
+        accountNumber:string,
             socials: {
-        facebook: String,
-            instagram: String,
-                twitter: String
+        facebook: string,
+            instagram: string,
+                twitter: string
     },
     education: {
-        level: String,
-            employmentStatus: String,
-                sector:String,
-                    duration: String,
-                        officeEmail: String,
+        level: string,
+            employmentStatus: string,
+                sector:string,
+                    duration: string,
+                        officeEmail: string,
                             monthlyIncome: [
-                                String,
-                                String
+                                string,
+                                string
                             ],
-                                loanRepayment: String
+                                loanRepayment: string
     },
-    id: String
+    id: string
 }
 
 export interface RespData{

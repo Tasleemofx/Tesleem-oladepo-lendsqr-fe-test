@@ -8,7 +8,7 @@ const Login = lazy(()=> import('./Pages/Login'))
 const Dashboard = lazy(()=> import('./Pages/Dashboard'))
 const UserDetails = lazy(()=> import('./Pages/UserDetails'))
 
-function App():JSX.Element {
+function App() {
   return (
     <div className="App">
       <Router>

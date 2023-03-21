@@ -22,9 +22,9 @@ const LoginForm = () => {
             <div className="logform-div">
                 <input type={show?'text':'password'} onChange={(e)=> setFormvalues({...formvalues, password: e.target.value})}/>
                 <label className={!formvalues.password? 'show-label':'no-show'}>Password</label>
-                <p className='show' onClick={handleshow}>SHOW</p>
+                  <p className='show forgot-password' onClick={handleshow}>SHOW</p>
             </div>
-            <p>FORGOT PASSWORD</p>
+            <p className="forgot-password">FORGOT PASSWORD</p>
             <button className="login-btn">LOG IN</button>
         </form>
     </div>
