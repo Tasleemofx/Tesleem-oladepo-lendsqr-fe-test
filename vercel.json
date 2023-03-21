@@ -1,0 +1,16 @@
+{
+    "rewrites": [
+        {
+            "src": "/",
+            "dest": "/"
+        },
+        {
+            "src": "/dashboard",
+            "dest": "/dashboard"
+        },
+    {
+            "src": "/dashboard/Userdetails",
+            "dest": "/dashboard/Userdetails"
+        }
+    ]
+}
