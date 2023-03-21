@@ -5,7 +5,7 @@ import { BiDotsVerticalRounded } from 'react-icons/bi'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { MdOutlinePersonRemoveAlt1  } from 'react-icons/md'
 import vector from "../../assets/images/Vector.png"
-import { useGetSingleUserQuery } from '../../features/lendsqrApi'
+
 import { useNavigate } from 'react-router-dom';
 import { RespData, UserObj } from '../model/model'
 import './tables.scss'
@@ -32,16 +32,12 @@ const DisplayTable = (tabledata: Tabledata):JSX.Element => {
     
     const [dialog, setDialog] = useState<{[key:string]: boolean}>({})
     const [orgDrop, setOrgDrop] = useState(false)
-    const [userId, setUserId] = useState<string>()
+   
 
+   
 
-    const { data, isLoading, error } = useGetSingleUserQuery<RespData>(userId)
-
-      function handleClick(id: string){
-        console.log(id)
-        setUserId(id)
-        console.log(data)
-        localStorage.setItem('userdata', JSON.stringify(data))
+      async function handleClick(id: string){ 
+        localStorage.setItem('userId', JSON.stringify(id))
         setDialog({})
         navigate('/dashboard/Userdetails/')
       }

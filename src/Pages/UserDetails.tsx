@@ -4,15 +4,18 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import { IoPersonOutline } from "react-icons/io5";
 import Navbar from '../Components/navbar/Navbar';
 import Sidebar from '../Components/sidenav/Sidebar'
+import { useGetSingleUserQuery } from '../features/lendsqrApi'
 import { UserObj } from '../Components/model/model'
 import "../assets/styles/userdetails.scss"
 
 const UserDetails = ():JSX.Element => {
   const navigate = useNavigate()
  
-  const [user, setUser] = useState<UserObj[]>(JSON.parse(localStorage.getItem('userdata') || ''))
+  const userId = (JSON.parse(localStorage.getItem('userId')|| ''))
 
-  
+  console.log(userId)
+  const {data: user, isLoading, error} = useGetSingleUserQuery(userId)
+  console.log(user)
 
   return (
     <div>
