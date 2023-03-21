@@ -4,7 +4,7 @@ import pablo from '../assets/images/pablo-sign-in 1.svg'
 import LoginForm from '../Components/loginform/LoginForm'
 import "../assets/styles/login.scss"
 
-const Login = () => {
+const Login = ():JSX.Element => {
   return (
     <div className="login-page">
         <div className="logo-half">

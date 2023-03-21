@@ -17,6 +17,11 @@
   display: flex;
   align-items: center;
 }
+.jsa-aic{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 .jsb-aic{
   display: flex;
   justify-content: space-between;

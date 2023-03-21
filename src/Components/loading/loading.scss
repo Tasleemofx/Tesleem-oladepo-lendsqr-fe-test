@@ -1,0 +1,18 @@
+.loadiv{
+    width: 100vw;
+    height: 100vh;
+.img-loader{
+    width: 5em;
+    height: 4em;
+    animation: rotator 0.1s infinite;
+}
+}
+
+@keyframes rotator{
+    from{
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg)
+    }
+}

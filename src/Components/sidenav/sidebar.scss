@@ -1,7 +1,55 @@
+@import '../../assets//styles/global.scss';
+
 .sidebar{
     position: fixed;
     left:0;
     height: 100vh;
     box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.04);
+    width: 20vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    .section-head {
+        padding: 1em;
+        margin: 1em;
+    }
+}
+
+.nav-items{
+
+    width: 17.6875em;
+    .nav-active{
+        background: rgba(57, 205, 204, 1);
+        opacity: 0.6;
+        color: $base-color;
+        padding: 1em;
+        width: 17.6875em;
+    }
+    a{
+        letter-spacing: 0px;
+        text-align: left;
+        padding: 1em;
+        text-decoration: none;
+        color: $base-color;
+    
+    &:hover{
+        width: 283px;
+        border-radius: 0px;
+        background: rgba(57, 205, 204, 1);
+        opacity: 0.6;
+        padding: 1em;
+    }
+    &:active{
+        color: $base-color;
+        background: rgba(57, 205, 204, 1);
+        opacity: 0.6;
+    }
+    &:visited{
+        color: $base-color;
+    }
+    }
+ 
 
 }
