@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { useNavigate} from 'react-router-dom'
 import "./loginform.scss"
 
 const LoginForm = () => {
+    const navigate = useNavigate()
     const [formvalues, setFormvalues] = useState({
         email: '',
         password:''
@@ -25,7 +27,8 @@ const LoginForm = () => {
                   <p className='show forgot-password' onClick={handleshow}>SHOW</p>
             </div>
             <p className="forgot-password">FORGOT PASSWORD</p>
-            <button className="login-btn">LOG IN</button>
+            <button className="login-btn"
+            onClick={()=> navigate(`/dashboard`)}>LOG IN</button>
         </form>
     </div>
   )
