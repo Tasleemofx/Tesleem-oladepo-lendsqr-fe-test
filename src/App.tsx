@@ -4,6 +4,7 @@ import Loading from './Components/loading/Loading'
 import {
   BrowserRouter as Router, Routes, Route
 } from 'react-router-dom'
+import ErrorPage from './Components/Error'
 const Login = lazy(()=> import('./Pages/Login'))
 const Dashboard = lazy(()=> import('./Pages/Dashboard'))
 const UserDetails = lazy(()=> import('./Pages/UserDetails'))
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path='/dashboard' element={<Suspense fallback={<Loading/>}><Dashboard /></Suspense>} />
         <Route path='/dashboard/Userdetails/' element={<Suspense  fallback={<Loading/>}><UserDetails /></Suspense>} />
+        <Route path='*' element={<ErrorPage/>} />
       </Routes>
       </Router>
 

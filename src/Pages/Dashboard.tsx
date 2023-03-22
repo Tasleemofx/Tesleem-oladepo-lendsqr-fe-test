@@ -34,7 +34,7 @@ const Dashboard = ():JSX.Element => {
           </div>
           <div className="fcolumn">
             <p className="top-he">ACTIVE USERS</p>
-            <p className="top-va">{allData.filter((item: UserObj) => item.lastActiveDate).length}</p>
+            <p className="top-va">{allData?.filter((item: UserObj) => item.lastActiveDate).length}</p>
           </div>
         </div>
         <div className="card-comp">
@@ -43,7 +43,7 @@ const Dashboard = ():JSX.Element => {
           </div>
           <div className="fcolumn">
             <p className="top-he">USERS WITH LOANS</p>
-            <p className="top-va">{allData.filter((item: UserObj) => item.education.loanRepayment).length}</p>
+            <p className="top-va">{allData?.filter((item: UserObj) => item.education.loanRepayment).length}</p>
           </div>
           
         </div>
@@ -53,7 +53,7 @@ const Dashboard = ():JSX.Element => {
           </div>
           <div className="fcolumn">
             <p className="top-he">USERS WITH SAVINGS</p>
-            <p className="top-va">{allData.filter((item: UserObj) => Number(item.accountBalance) > 100).length}</p>
+            <p className="top-va">{allData?.filter((item: UserObj) => Number(item.accountBalance) > 100).length}</p>
           </div>
         </div>
         </div>
