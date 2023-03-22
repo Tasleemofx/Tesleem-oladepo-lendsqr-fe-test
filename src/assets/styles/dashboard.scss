@@ -1,0 +1,68 @@
+@import "./global.scss";
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 8em;
+    left: 17em;
+.card-comp{
+    height: 160px;
+    width: 240px;
+    border-radius: 4px;
+    background:  #fff;
+    border:  1px solid #213F7D0F;
+    box-shadow: 3px 5px 20px 0px #0000000A;
+    margin: 1em;
+    padding: 1em;
+    .card-circle{
+        height: 40px;
+        width: 40px;
+        left: 639px;
+        top: 248px;
+        border-radius: 50%;
+        background: #5718FF;
+        margin: 1em 0;
+        opacity: 0.1;
+        
+        img{
+            z-index: 1;
+            opacity: 1;
+        }
+    }
+    .top-he{
+        font-family: Work Sans;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $font-color;
+    }
+    .top-va{
+        font-family: Work Sans;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $base-color;
+    }
+}
+}
+
+@media screen and (min-width: 768px){
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .card-comp{
+    height: 10.666666666666666em;
+    width: 14em;
+    border-radius: 4px;
+    background:  #fff;
+    border:  1px solid #213F7D0F;
+    margin: 1em;
+}
+}
+}
