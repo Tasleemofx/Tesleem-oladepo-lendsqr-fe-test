@@ -54,7 +54,19 @@
 
 }
 .profile{
-
+    position: relative;
+    margin-bottom: 1em;
+    cursor: pointer;
+    z-index: 1;
+}
+.modal{
+    padding: 2em 0;
+    color: red;
+    position: absolute;
+    span{
+        display: block;
+        cursor: pointer;
+    }
 }
 }
 }

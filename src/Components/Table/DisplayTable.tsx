@@ -130,7 +130,7 @@ const DisplayTable = ({array, pageNo, setPageNo, handleNext, handlePrev, dataSiz
                     
                     <tbody>
                         {array.slice(pageNo-1,dataSize)
-                        .map(({orgName,userName,email, phoneNumber, createdAt, id}:any) => {
+                            .map(({ orgName, userName, email, phoneNumber, createdAt, lastActiveDate, id}:any) => {
                             return (
                                 <tr key={id}>
 
@@ -139,7 +139,8 @@ const DisplayTable = ({array, pageNo, setPageNo, handleNext, handlePrev, dataSiz
                                     <td>{email}</td>
                                     <td>{phoneNumber}</td>
                                     <td>{createdAt.toLocaleString()}</td>
-                                    <td>{}</td>
+                                    <td className='activer'>
+                                        <span>{lastActiveDate? 'active': "inactive"}</span></td>
                                     <td className="stat-td">
                                         <BiDotsVerticalRounded onClick={() => {                                           
                                             setDialog({ ...dialog, [id]: !dialog[id] })

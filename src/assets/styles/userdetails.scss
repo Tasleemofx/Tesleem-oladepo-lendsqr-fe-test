@@ -17,7 +17,7 @@
         }
       button{
         margin: 1em;
-        width: 170px;
+        width: 10.625em;
         padding: 1em;
         border-radius: 8px;
         background: #fff;
@@ -188,4 +188,8 @@
 
       }
     }
+}
+
+@media screen and (min-width:768px){
+
 }
