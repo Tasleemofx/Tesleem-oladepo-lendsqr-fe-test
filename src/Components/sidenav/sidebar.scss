@@ -3,6 +3,7 @@
 .sidebar{
     position: fixed;
     left:0;
+    top: 5em;
     height: 100vh;
     box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.04);
     width: 20vw;
@@ -14,25 +15,35 @@
     .section-head {
         padding: 1em;
         margin: 1em;
+        svg{
+        color: $base-color;
+        opacity: 0.6;
+        margin-right: 0.5em;
+        }
     }
 }
 
 .nav-items{
-
+    
     width: 17.6875em;
-    .nav-active{
-        background: rgba(57, 205, 204, 1);
-        opacity: 0.6;
-        color: $base-color;
-        padding: 1em;
-        width: 17.6875em;
-    }
+    // .nav-active{
+    //     background: rgba(57, 205, 204, 1);
+    //     opacity: 0.6;
+    //     color: $base-color;
+    //     padding: 1em;
+    //     width: 17.6875em;
+    // }
     a{
         letter-spacing: 0px;
         text-align: left;
         padding: 1em;
         text-decoration: none;
         color: $base-color;
+         svg{
+        color: $base-color;
+        opacity: 0.6;
+        margin-right: 0.5em;
+        }
     
     &:hover{
         width: 283px;
@@ -41,7 +52,7 @@
         opacity: 0.6;
         padding: 1em;
     }
-    &:active{
+    &.active{
         color: $base-color;
         background: rgba(57, 205, 204, 1);
         opacity: 0.6;

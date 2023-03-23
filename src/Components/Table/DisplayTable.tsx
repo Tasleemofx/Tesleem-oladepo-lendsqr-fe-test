@@ -4,6 +4,7 @@ import { BsPersonCheck  } from 'react-icons/bs'
 import { BiDotsVerticalRounded } from 'react-icons/bi'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { MdOutlinePersonRemoveAlt1  } from 'react-icons/md'
+import { NavLink } from 'react-router-dom';
 import vector from "../../assets/images/Vector.png"
 
 import { useNavigate } from 'react-router-dom';
@@ -13,12 +14,13 @@ import './tables.scss'
 interface Tabledata{
     array: Array<{}>,
     pageNo: number,
+    setPageNo: React.Dispatch<React.SetStateAction<number>>,
     handleNext: any,
     handlePrev: any,
     dataSize: any,
     setDataSize: any
 }
-const DisplayTable = (tabledata: Tabledata):JSX.Element => {
+const DisplayTable = ({array, pageNo, setPageNo, handleNext, handlePrev, dataSize, setDataSize}: Tabledata):JSX.Element => {
     interface Arraydata {
         orgName: string | null,
         userName: string | null,
@@ -38,7 +40,7 @@ const DisplayTable = (tabledata: Tabledata):JSX.Element => {
 
       async function handleClick(id: string){ 
         localStorage.setItem('userId', JSON.stringify(id))
-        setDialog({})
+        // setDialog({})
         navigate('/dashboard/Userdetails/')
       }
         return (
@@ -127,7 +129,7 @@ const DisplayTable = (tabledata: Tabledata):JSX.Element => {
                     </thead>
                     
                     <tbody>
-                        {tabledata.array.slice(tabledata.pageNo-1,tabledata.dataSize)
+                        {array.slice(pageNo-1,dataSize)
                         .map(({orgName,userName,email, phoneNumber, createdAt, id}:any) => {
                             return (
                                 <tr key={id}>
@@ -139,7 +141,9 @@ const DisplayTable = (tabledata: Tabledata):JSX.Element => {
                                     <td>{createdAt.toLocaleString()}</td>
                                     <td>{}</td>
                                     <td className="stat-td">
-                                        <BiDotsVerticalRounded onClick={() => setDialog({ ...dialog, [id]: !dialog[id] })} />
+                                        <BiDotsVerticalRounded onClick={() => {                                           
+                                            setDialog({ ...dialog, [id]: !dialog[id] })
+                                        }} />
                                         {
                                             dialog[id] && <span className='dialogbox'>
                                                 <div onClick={()=>handleClick(id)} className="jcc-aic">
@@ -158,23 +162,33 @@ const DisplayTable = (tabledata: Tabledata):JSX.Element => {
                 <div className="foot">
                     <span className="l-foot"> 
                         <span>Showing</span>
-                    <select onChange={(e) => tabledata.setDataSize(e.target.value)}>
+                    <select onChange={(e) => setDataSize(e.target.value)}>
                         <option value="10" >10</option>
                         <option value="20">20</option>
                         <option value="30">30</option>
                         <option value="40">40</option>
                         <option value='50'>50</option>
                     </select>
-                        <span> out of {tabledata.array.length}</span>
+                        <span> out of {array.length}</span>
                     </span>
                     <span className="r-foot">
-                        <button><IoIosArrowBack /></button>
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button>4</button>
-                        <button>5</button>
-                        <button><IoIosArrowForward/></button>
+                        <button className="dir-btn" disabled={pageNo === 1}
+                        onClick={()=>{
+                            if(pageNo>1){
+                                setPageNo(()=> pageNo-1)
+                            }
+                        }}><IoIosArrowBack /></button>
+                        <span className="num-foot act"
+                        >{pageNo}</span>
+                        <span className="num-foot"
+                            onClick={() => setPageNo((pageNo) => pageNo + 1)}>{pageNo+1}</span>
+                        <span className="num-foot"
+                            onClick={() => setPageNo((pageNo) => pageNo + 2)}>{pageNo+2}</span>
+                        <span className="num-foot">...</span>
+                      
+                        <button  className="dir-btn" onClick={()=>{
+                            setPageNo(()=> pageNo+1)
+                        }}><IoIosArrowForward/></button>
                     </span>
                 </div>
             </div>

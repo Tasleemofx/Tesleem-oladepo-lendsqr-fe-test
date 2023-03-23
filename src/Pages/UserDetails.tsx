@@ -43,11 +43,11 @@ const UserDetails = ():JSX.Element => {
         </div>
         </div>
         <div className='profile-box'>
-        <div className="jsb-aic">
+        <div className="jsb-aic fwi">
             <div className='avatar-symb'>
-            {
+            { user?.profile.avatar ?
             <img src={user?.profile?.avatar} alt="userpic" className='avatar-symb' />
-              || <IoPersonOutline/>
+              : <IoPersonOutline/>
               }
             </div>
             <div className="user-fname">

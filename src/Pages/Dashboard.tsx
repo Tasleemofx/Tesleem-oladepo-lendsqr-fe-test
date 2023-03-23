@@ -57,7 +57,7 @@ const Dashboard = ():JSX.Element => {
           </div>
         </div>
         </div>
-        <DisplayTable array={allData ? allData: []} pageNo={pageNo} handleNext={()=>setPageNo( pageNo+1)} handlePrev={()=>setPageNo(()=>pageNo-1)}
+        <DisplayTable array={allData ? allData: []} pageNo={pageNo} setPageNo={setPageNo} handleNext={()=>setPageNo( pageNo+1)} handlePrev={()=>setPageNo(()=>pageNo-1)}
         setDataSize={setDataSize} dataSize={dataSize} />
         
     </div>
