@@ -18,12 +18,12 @@ const LoginForm = () => {
         <p className="dets-log">Enter details to login.</p>
         <form>
             <div className="logform-div">
-                <input type="email" onChange={(e)=> setFormvalues({...formvalues, email: e.target.value})}/>
-                <label className={!formvalues.email? "show-label": "no-show"}>Email</label>
+                <input type="email" id="email" onChange={(e)=> setFormvalues({...formvalues, email: e.target.value})}/>
+                <label htmlFor="email" className={!formvalues.email? "show-label": "no-show"}>Email</label>
             </div>
             <div className="logform-div">
-                <input type={show?'text':'password'} onChange={(e)=> setFormvalues({...formvalues, password: e.target.value})}/>
-                <label className={!formvalues.password? 'show-label':'no-show'}>Password</label>
+                <input type={show?'text':'password'} id="pwd" onChange={(e)=> setFormvalues({...formvalues, password: e.target.value})}/>
+                <label htmlFor="pwd" className={!formvalues.password? 'show-label':'no-show'}>Password</label>
                   <p className='show forgot-password' onClick={handleshow}>SHOW</p>
             </div>
             <p className="forgot-password">FORGOT PASSWORD</p>

@@ -1,16 +1,24 @@
 import * as React from 'react';
+
+import { useNavigate } from 'react-router-dom'
 import union from '../../assets/images/Union.png';
 import lend from '../../assets/images/lendsqr.png';
 import image from '../../assets/images/image 4.png';
 import './navbar.scss'
 
 const Navbar=()=>{
+
+    const navigate = useNavigate();
+    
     return(
         <nav className="nav-bar">
-            <div className="nav-logo">
-                <img src={union} alt="logo" className="unioni"/>
-                <img src={lend} alt="lender-text" className="lenderqsr"/>
-            </div>
+            <span className="fcolumn">
+                <div className="nav-logo" onClick={()=> navigate("/")}>
+                    <img src={union} alt="logo" className="unioni"/>
+                    <img src={lend} alt="lender-text" className="lenderqsr"/>
+                </div>
+          
+            </span>
             <div className="nav-search">
                 <input type="search" placeholder='Search for anything'/>
                 <button className="search-btn">
