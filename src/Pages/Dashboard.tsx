@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { HiOutlineDocumentText } from "react-icons/hi"
 import Navbar from '../Components/navbar/Navbar'
 import Sidebar from '../Components/sidenav/Sidebar'
 import DisplayTable from '../Components/Table/DisplayTable'
@@ -6,6 +7,8 @@ import { useGetAllUsersQuery } from '../features/lendsqrApi'
 import { UserObj } from '../Components/model/model'
 import user from '../assets/images/user-l.png'
 import '../assets/styles/dashboard.scss'
+import { FaCoins } from 'react-icons/fa'
+import { BsPersonFill } from 'react-icons/bs'
 
 
 const Dashboard = ():JSX.Element => {
@@ -20,8 +23,8 @@ const Dashboard = ():JSX.Element => {
         <Sidebar/>
         <div className="cards">
           <div className="card-comp">
-            <div className="card-circle jcc-aic">
-              
+            <div className="card-circle swa jcc-aic">
+            <BsPersonFill/>
             </div>
           <div className="fcolumn">
             <p className="top-he">USERS</p>
@@ -38,8 +41,8 @@ const Dashboard = ():JSX.Element => {
           </div>
         </div>
         <div className="card-comp">
-          <div className="card-circle jcc-aic">
-
+          <div className="card-circle fse jcc-aic">
+            <HiOutlineDocumentText/>
           </div>
           <div className="fcolumn">
             <p className="top-he">USERS WITH LOANS</p>
@@ -48,8 +51,8 @@ const Dashboard = ():JSX.Element => {
           
         </div>
         <div className="card-comp">
-          <div className="card-circle jcc-aic">
-
+          <div className="card-circle gre jcc-aic">
+            <FaCoins/>
           </div>
           <div className="fcolumn">
             <p className="top-he">USERS WITH SAVINGS</p>

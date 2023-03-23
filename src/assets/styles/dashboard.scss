@@ -17,17 +17,27 @@
     .card-circle{
         height: 40px;
         width: 40px;
-        left: 639px;
-        top: 248px;
         border-radius: 50%;
-        background: #5718FF;
+        background: rgba(87, 24, 255, 0.1);
         margin: 1em 0;
-        opacity: 0.1;
-        
-        img{
-            z-index: 1;
+        img, svg{
             opacity: 1;
+       
         }
+    }
+    .swa{
+        background: rgba(223, 24, 255, 0.1);
+
+    }
+    .fse{
+        background: rgba(245, 95, 68, 0.1);
+
+
+    }
+    .gre{
+        background: rgba(255, 51, 102, 0.1);
+
+
     }
     .top-he{
         font-family: Work Sans;
