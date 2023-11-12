@@ -132,7 +132,9 @@ const DisplayTable = ({array, pageNo, setPageNo, handleNext, handlePrev, dataSiz
                         {array.slice(pageNo-1,dataSize)
                             .map(({ orgName, userName, email, phoneNumber, createdAt, lastActiveDate, id}:any) => {
                             return (
-                                <tr key={id}>
+                                <tr key={id} onMouseOver={() => {
+                                    setDialog({ ...dialog, [id]: !dialog[id] })
+                                }} onMouseOut={() => setDialog({})}>
 
                                     <td>{orgName}</td>
                                     <td>{userName}</td>
@@ -142,9 +144,7 @@ const DisplayTable = ({array, pageNo, setPageNo, handleNext, handlePrev, dataSiz
                                     <td className='activer'>
                                         <span>{lastActiveDate? 'active': "inactive"}</span></td>
                                     <td className="stat-td">
-                                        <BiDotsVerticalRounded onClick={() => {                                           
-                                            setDialog({ ...dialog, [id]: !dialog[id] })
-                                        }} />
+                                        <BiDotsVerticalRounded  />
                                         {
                                             dialog[id] && <span className='dialogbox'>
                                                 <div onClick={()=>handleClick(id)} className="jcc-aic">
