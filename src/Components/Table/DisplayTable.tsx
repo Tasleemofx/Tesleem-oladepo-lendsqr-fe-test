@@ -132,9 +132,9 @@ const DisplayTable = ({array, pageNo, setPageNo, handleNext, handlePrev, dataSiz
                         {array.slice(pageNo-1,dataSize)
                             .map(({ orgName, userName, email, phoneNumber, createdAt, lastActiveDate, id}:any) => {
                             return (
-                                <tr key={id} onMouseOver={() => {
+                                <tr key={id} onMouseEnter={() => {
                                     setDialog({ ...dialog, [id]: !dialog[id] })
-                                }} onMouseOut={() => setDialog({})}>
+                                }} onMouseLeave={() => setDialog({})}>
 
                                     <td>{orgName}</td>
                                     <td>{userName}</td>
